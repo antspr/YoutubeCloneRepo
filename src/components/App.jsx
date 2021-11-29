@@ -6,7 +6,7 @@ import Comments from './Comments/Comments';
 import axios from 'axios';
 import SearchResults from './SearchResults/SearchResults';
 import RecommendedVideos from './RecommendedVideos/RecommendedVideos';
-import "./App.css";
+
 
 class App extends Component {
     constructor(props){
@@ -86,6 +86,6 @@ class App extends Component {
                     getVideoComments={this.getVideoComments}/>
             </div>
         )
-    }
+    };
 }
 export default App;
