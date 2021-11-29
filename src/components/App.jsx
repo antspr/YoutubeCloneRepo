@@ -24,10 +24,16 @@ class App  extends Component {
     
     }
 
-    async getVideo(){ //Youtube API
+
+
+    }
+
+    getRecommended = (props) => { // Youtube API
+
+    getVideo = (props) => { //Youtube API
         return
     }
-    async getComments(){ // Our Backend
+    async getComments(){
         try {
             let response = await axios.get(' http://127.0.0.1:8000/Comments');
             this.setState ({
@@ -52,6 +58,7 @@ class App  extends Component {
         }
     }
     getRecommended = (props) => { // Youtube API
+
         return
     }
 
