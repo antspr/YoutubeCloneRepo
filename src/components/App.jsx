@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 class App  extends Component {
-    ructor(props) {
+    constructor(props) {
         super(props);
         this.state = { 
             videoID : [],
@@ -20,6 +20,7 @@ class App  extends Component {
     }
     componentDidMount() {
         this.getComments();
+        this.getReplies();
     
     }
 
@@ -38,14 +39,29 @@ class App  extends Component {
     getVideo = (props) => { //Youtube API
         return
     }
-    getComments = (props) => { // Our Backend
+    async getComments(){
         try {
-            let comments = await axios.get(' http://127.0.0.1:8000/Comments');
+            let response = await axios.get(' http://127.0.0.1:8000/Comments');
+            this.setState ({
+                comments : response.data.comments
+            })
             
         }
+        catch (ex){
+            console.log('Error in API call');
+        }
     }
-    getReplies = (props) => { // Our Backend
-        return
+    async getReplies() { // Our Backend
+        try {
+            let response = await axios.get(' http://127.0.0.1:8000/Replies');
+            this.setState ({
+                comments : response.data.comments
+            })
+            
+        }
+        catch (ex){
+            console.log('Error in API call');
+        }
     }
     getRecommended = (props) => { // Youtube API
 
