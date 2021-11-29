@@ -4,7 +4,7 @@ import VideoPlayer from './Video/VideoPlayer';
 
 
 class App  extends Component {
-    constructor(props) {
+    ructor(props) {
         super(props);
         this.state = { 
             videoID : [],
@@ -17,16 +17,16 @@ class App  extends Component {
          //VideoID will be set with youtubeAPI to get the video and its details for destructuring throughout the app...
     }
 
-    const getVideo = (props) => { //Youtube API
+     getVideo = (props) => { //Youtube API
         return
     }
-    const getComments = (props) => { // Our Backend
+     getComments = (props) => { // Our Backend
         return
     }
-    const getReplies = (props) => { // Our Backend
+     getReplies = (props) => { // Our Backend
         return
     }
-    const getRecommended = (props) => { // Youtube API
+     getRecommended = (props) => { // Youtube API
         return
     }
 
