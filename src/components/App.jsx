@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
- import Comments from './Comments/Comments';
-import VideoPlayer from './Video/VideoPlayer';
+import Comments from './Comments/Comments';
+import VideoPlayer from './VideoPlayer/VideoPlayer';
+import axios from 'axios';
+
 
 
 class App  extends Component {
@@ -16,17 +18,24 @@ class App  extends Component {
 
          //VideoID will be set with youtubeAPI to get the video and its details for destructuring throughout the app...
     }
+    componentDidMount() {
+        this.getComments();
+    
+    }
 
-    const getVideo = (props) => { //Youtube API
+    getVideo = (props) => { //Youtube API
         return
     }
-    const getComments = (props) => { // Our Backend
+    getComments = (props) => { // Our Backend
+        try {
+            let comments = await axios.get(' http://127.0.0.1:8000/Comments');
+            
+        }
+    }
+    getReplies = (props) => { // Our Backend
         return
     }
-    const getReplies = (props) => { // Our Backend
-        return
-    }
-    const getRecommended = (props) => { // Youtube API
+    getRecommended = (props) => { // Youtube API
         return
     }
 
