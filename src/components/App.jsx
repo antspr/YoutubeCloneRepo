@@ -23,7 +23,7 @@ class App  extends Component {
     
     }
 
-<<<<<<< HEAD
+
      getVideo = (props) => { //Youtube API
         return
     }
@@ -34,7 +34,7 @@ class App  extends Component {
         return
     }
      getRecommended = (props) => { // Youtube API
-=======
+
     getVideo = (props) => { //Youtube API
         return
     }
@@ -48,7 +48,7 @@ class App  extends Component {
         return
     }
     getRecommended = (props) => { // Youtube API
->>>>>>> 892942ee785d28f00389a539c9b4135c9d6f24e7
+
         return
     }
 
