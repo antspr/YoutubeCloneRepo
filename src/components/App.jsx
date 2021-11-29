@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comments from './Comments/Comments';
 import VideoPlayer from './VideoPlayer/VideoPlayer';
+import RecommendedVideos from './RecommendedVideos/RecommendedVideos';
 import axios from 'axios';
 
 
@@ -22,26 +23,17 @@ class App  extends Component {
         this.getComments();
         this.getReplies();
     
-    }
+    };
 
 
-     getVideo = (props) => { //Youtube API
-        return
-    }
-     getComments = (props) => { // Our Backend
-        return
-    }
-     getReplies = (props) => { // Our Backend
-        return
-    }
-     getRecommended = (props) => { // Youtube API
+    
+    getRecommended = (props) => {} // Youtube API
 
-    getVideo = (props) => { //Youtube API
-        return
-    }
+
+    
     async getComments(){
         try {
-            let response = await axios.get(' http://127.0.0.1:8000/Comments');
+            let response = axios.get(' http://127.0.0.1:8000/Comments');
             this.setState ({
                 comments : response.data.comments
             })
@@ -51,11 +43,11 @@ class App  extends Component {
             console.log('Error in API call');
         }
     }
-    async getReplies() { // Our Backend
+    async getReplies(){ // Our Backend
         try {
-            let response = await axios.get(' http://127.0.0.1:8000/Replies');
+            let response =  axios.get(' http://127.0.0.1:8000/Replies');
             this.setState ({
-                comments : response.data.comments
+                comments : response.data.replies
             })
             
         }
@@ -69,15 +61,16 @@ class App  extends Component {
     }
 
     
-    render() { 
-        debugger
+    render(){ 
+        
         return ( 
             <div>
                 <VideoPlayer/>
                 <Comments/>
+                <RecommendedVideos/>
             </div>
          );
-    }
+    };
 }
  
 export default App ;

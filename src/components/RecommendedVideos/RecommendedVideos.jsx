@@ -1,7 +1,7 @@
 import React from 'react';
 import './RecommendedVideos.css';
 
-const RecommendedVideos = (prop) => {
+const RecommendedVideos = (props) => {
 
     const handleClick = (event,id,title) => {
         event.preventDefault()
@@ -15,9 +15,9 @@ const RecommendedVideos = (prop) => {
                 {PaymentResponse.videos.filter(videos => !videos.id.videoId.includes(props.videoId)).map(videos=> (
                     <span>
                         <div class= "relatedVideo">
-                        <input type= "image" onClick={(event)=> handleClick(event, videos.id.videoId, videos.snippit.title)} src={videos.snippit.thumbnails.medium.url}
-                            width={videos.snippit.thumbnails.medium.width}
-                            height={videos.snippit.thumbnails.medium.height} />
+                        <input type= "image" alt="" onClick={(event)=> handleClick(event, videos.id.videoId, videos.snippet.title)} src={videos.snippet.thumbnails.medium.url}
+                            width={videos.snippet.thumbnails.medium.width}
+                            height={videos.snippet.thumbnails.medium.height} />
                             <div class="relatedVideoTitle">
                                 {videos.snippet.title}
 
