@@ -1,37 +1,37 @@
 import React from 'react';
 import './RecommendedVideos.css';
 
-const RecommendedVideos = (prop) => {
-
-    const handleClick = (event,id,title) => {
+const RecommendedVideos = (props) => {
+    
+    const handleClick = (event, id, title, description) => {
         event.preventDefault()
-        PaymentResponse.getVideoIdTitle(id,title)
+        props.getVideoInfo(id, title, description)
     }
-
-    return(
+    
+    return (
         <div className="recommendedVideos">
             <h1>Recommended Videos</h1>
             <div className="allRelatedVideos">
-                {PaymentResponse.videos.filter(videos => !videos.id.videoId.includes(props.videoId)).map(videos=> (
+                {props.videos.filter(videos => !videos.id.videoId.includes(props.videoId)).map(videos => (
                     <span>
-                        <div class= "relatedVideo">
-                        <input type= "image" onClick={(event)=> handleClick(event, videos.id.videoId, videos.snippit.title)} src={videos.snippit.thumbnails.medium.url}
-                            width={videos.snippit.thumbnails.medium.width}
-                            height={videos.snippit.thumbnails.medium.height} />
+                        <div class="relatedVideo">
+                        <input type="image" 
+                            onClick={(event) => handleClick(event, videos.id.videoId, videos.snippet.title, videos.snippet.description)}
+                            src={videos.snippet.thumbnails.medium.url}
+                            width={videos.snippet.thumbnails.medium.width}
+                            height={videos.snippet.thumbnails.medium.height} />
                             <div class="relatedVideoTitle">
                                 {videos.snippet.title}
-
                             </div>
                         </div>
                     </span>
-                  ))}
+                ))}
             </div>
-        </div>
+        </div> 
     );
 }
-           
+ 
 export default RecommendedVideos;
-
 
 
 
