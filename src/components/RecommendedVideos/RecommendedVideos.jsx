@@ -1,7 +1,7 @@
 import React from 'react';
-import './RecomendedVideos.css';
+import './RecommendedVideos.css';
 
-const RecomendedVideos = (prop) => {
+const RecommendedVideos = (prop) => {
 
     const handleClick = (event,id,title) => {
         event.preventDefault()
@@ -10,7 +10,7 @@ const RecomendedVideos = (prop) => {
 
     return(
         <div className="recommendedVideos">
-            <h1>Recomended Videos</h1>
+            <h1>Recommended Videos</h1>
             <div className="allRelatedVideos">
                 {PaymentResponse.videos.filter(videos => !videos.id.videoId.includes(props.videoId)).map(videos=> (
                     <span>
@@ -30,7 +30,7 @@ const RecomendedVideos = (prop) => {
     );
 }
            
-export default RecomendedVideos;
+export default RecommendedVideos;
 
 
 

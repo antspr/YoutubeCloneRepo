@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
- import Comment from './Comments/Comment';
+ import Comments from './Comments/Comments';
 import VideoPlayer from './Video/VideoPlayer';
 
 
@@ -7,8 +7,27 @@ class App  extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+            videoID : [],
+            comments : [],
+            recommendedVideos : [],
+            replies : [],
 
          }
+
+         //VideoID will be set with youtubeAPI to get the video and its details for destructuring throughout the app...
+    }
+
+    const getVideo = (props) => { //Youtube API
+        return
+    }
+    const getComments = (props) => { // Our Backend
+        return
+    }
+    const getReplies = (props) => { // Our Backend
+        return
+    }
+    const getRecommended = (props) => { // Youtube API
+        return
     }
 
     
@@ -17,7 +36,7 @@ class App  extends Component {
         return ( 
             <div>
                 <VideoPlayer/>
-                <Comment/>
+                <Comments/>
             </div>
          );
     }

@@ -23,7 +23,7 @@ const VideoPlayer = (props) => {
        
         <div>
         {console.log(videoId)}
-        <iframe id="ytplayer" type="text/html" width="640" height="360"
+        <iframe id="ytplayer" type="text/html" width="640" height="360" title="Video"
         src={`https://www.youtube.com/embed/${videoId}?autoplay=1&origin=http://example.com`}
         frameborder="0"></iframe>
         </div>
