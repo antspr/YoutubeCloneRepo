@@ -25,10 +25,16 @@ class App  extends Component {
     }
 
 
-
+     getVideo = (props) => { //Youtube API
+        return
     }
-
-    getRecommended = (props) => { // Youtube API
+     getComments = (props) => { // Our Backend
+        return
+    }
+     getReplies = (props) => { // Our Backend
+        return
+    }
+     getRecommended = (props) => { // Youtube API
 
     getVideo = (props) => { //Youtube API
         return
