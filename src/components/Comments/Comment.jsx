@@ -1,26 +1,6 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-
-
-class Comment  extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  
-            comment : []
-            }
-    
-        
-        
-        }
-    render() { 
-        return ( 
-            <div>
-                <h1>This will be comments</h1>
-=======
-import React from 'react'
+import React from "react";
 import "./Comments.css"
 import 'bootstrap/dist/css/bootstrap.css';
-
 
 function Comments(props){
     return (
@@ -39,7 +19,6 @@ function Comments(props){
                 </svg></button>
                 </form>
                 
->>>>>>> 5f7473f180ebd9d0663ff05cec299de51d9a1c73
             </div>
         </div>
        
@@ -47,24 +26,3 @@ function Comments(props){
 }
 
 export default Comments;
-
-
-// class Comment  extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {  
-//             comment = []
-//             }
-        
-        
-//         }
-//     render() { 
-//         return ( 
-//             <div>
-
-//             </div>
-//          );
-//     }
-// }
- 
-// export default Comment;
