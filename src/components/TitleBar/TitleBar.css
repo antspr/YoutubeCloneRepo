@@ -1,8 +1,8 @@
 .titlebar-nav {
-    background: rgb(241,111,114);
-    background: radial-gradient(circle, rgba(241,111,114,1) 9%, rgba(253,45,45,1) 67%); 
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 0, 0) 9%, rgb(0, 0, 0)7%); 
     width: 100%;
-    color: #fff;
+    color: rgb(255, 0, 0);
     vertical-align: center;
     display: inline-flex;
 }

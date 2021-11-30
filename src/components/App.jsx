@@ -16,13 +16,13 @@ class App extends Component {
             relatedVideos:[],
             videoComments:[]
     }
-        this.videoId = "5JkXCnXT5nU";
-        this.videoTitle = "YouTube Developers Live: Embedded Web Player Customization"
+        this.videoId = "uImzvPTzK_E";
+        this.videoTitle = "Subs catch on fire"
         this.videoDescription = "Default Video"
 }
     getResultVideoList = async (searchFor) => {
         let response = await axios.get('https://www.googleapis.com/youtube/v3/search?key=AIzaSyAUFW6W2O6Mqz3liLuFKlGvg4H4ITggyGA&kind="video"&part=snippet&maxResults=5&q=' + (searchFor))
-        console.log(response.data.items)
+        console.log(response.data)
         this.setState({
             resultVideos: response.data.items
         })
