@@ -9,7 +9,7 @@ const Comments = (props) => {
     //need to write this into http://127.0.0.1:8000/comments/ --->>> commentText (Charfield150) on backend
     //where does comment live in relation to video on backend
     const postComment = () => {
-        setComment : await axios.put(http://127.0.0.1:8000/comments/)
+        setComment : await axios.put('http://127.0.0.1:8000/comments/')
 
     }  
     return (
