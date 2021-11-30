@@ -58,7 +58,7 @@ class App extends Component {
         this.getVideoComments();
     }
 
-    render(){
+    render = () => {
         return (
             <div className="container-fluid">
                 <TitleBar />
