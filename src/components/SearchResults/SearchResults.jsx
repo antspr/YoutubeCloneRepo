@@ -16,7 +16,7 @@ const SearchResults = (props) => {
                 {props.videos.map(videos => (
                     <span>
                         <div class="relatedVideo">
-                        <input type="image"
+                        <input type="image" alt=""
                             onClick={(event) => handleClick(event, videos.id.videoId, videos.snippet.title, videos.snippet.description)}
                             src={videos.snippet.thumbnails.medium.url}
                              />

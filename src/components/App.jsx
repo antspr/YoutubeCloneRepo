@@ -14,7 +14,8 @@ class App extends Component {
         this.state = {
             resultVideos:[],
             relatedVideos:[],
-            videoComments:[]
+            videoComments:[],
+            newComment:[]
     }
         this.videoId = "uImzvPTzK_E";
         this.videoTitle = "Subs catch on fire"
@@ -54,11 +55,20 @@ class App extends Component {
         });
     }
 
+    postNewComment = async () => {
+        let newPost = await axios.post('http://127.0.0.1:8000/comments/' + (this.videoId) + '/', this.newComment);
+        console.log(newPost.data);
+        this.setState({
+            newComment: ''
+        })
+    }
+
     componentDidMount() {
         this.getVideoComments();
     }
 
     render = () => {
+        
         return (
             <div className="container-fluid">
                 <TitleBar />
@@ -68,7 +78,7 @@ class App extends Component {
                             videoId={this.videoId}
                             videoTitle={this.videoTitle}
                             videoDescription={this.videoDescription}/> 
-                        <Comments commentDetails={this.state.videoComments}/>
+                        <Comments commentDetails={this.videoComments} />
                     </div>
                     <div className="recommended">
                         <RecommendedVideos 

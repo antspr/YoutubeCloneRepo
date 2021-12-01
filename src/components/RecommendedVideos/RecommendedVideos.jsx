@@ -16,7 +16,7 @@ const RecommendedVideos = (props) => {
                 {props.videos.filter(videos => !videos.id.videoId.includes(props.videoId)).map(videos => (
                     <span>
                         <div class="recommendedVideo">
-                        <input type="image" 
+                        <input type="image" alt=""
                             onClick={(event) => handleClick(event, videos.id.videoId, videos.snippet.title, videos.snippet.description)}
                             src={videos.snippet.thumbnails.medium.url}
                             width={videos.snippet.thumbnails.medium.width}
